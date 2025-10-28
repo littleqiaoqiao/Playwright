@@ -1,5 +1,5 @@
 from playwright.sync_api import sync_playwright
-import time
+# import time
 
 p = sync_playwright().start()
 browser = p.chromium.launch(headless=False)
