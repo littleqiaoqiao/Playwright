@@ -14,9 +14,10 @@ with sync_playwright() as p:
     page.locator('#go').click()      # 点击查询
     #page.get_by_text('test').nth(1).click() #点击第二个test链接
 
-    page.wait_for_timeout(2000)
+    page.wait_for_timeout(2000) #playwright中等待的用法 不要用time.sleep()
 
     lcs = page.locator(".result-item").all() #打印所有搜索内容
+    #edit
     for lc in lcs:
         print(lc.inner_text())
 
